@@ -1,0 +1,5 @@
+<launch>
+  <rosparam file="$(find itri_imu_usb)/config/sensor_filter.yaml" command="load" />
+
+  <node name="sensor_filter_sss" pkg="itri_imu_usb" type="sensor_filter_sss" output="screen" />
+</launch>

@@ -13,7 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 catkin_package(
-  CATKIN_DEPENDS roscpp sensor_msgs serial
+  CATKIN_DEPENDS roscpp sensor_msgs serial tf2
 )
 
 include_directories(
@@ -24,11 +24,17 @@ include_directories(
 add_executable(itri_imu_usb src/itri_imu_usb.cpp)
 target_link_libraries(itri_imu_usb ${catkin_LIBRARIES})
 
+add_executable(itri_imu_usb_sss src/itri_imu_usb_sss.cpp)
+target_link_libraries(itri_imu_usb_sss ${catkin_LIBRARIES})
+
+add_executable(sensor_filter_sss src/sensor_filter_sss.cpp)
+target_link_libraries(sensor_filter_sss ${catkin_LIBRARIES})
+
+add_executable(moving_average_filter src/moving_average_filter.cpp)
+target_link_libraries(moving_average_filter ${catkin_LIBRARIES})
+
 add_executable(low_pass_filter src/low_pass_filter.cpp)
 target_link_libraries(low_pass_filter ${catkin_LIBRARIES})
 
 add_executable(butterworth_filter src/butterworth_filter.cpp)
-target_link_libraries(butterworth_filter ${catkin_LIBRARIES} ${Boost_LIBRARIES})
-
-add_executable(moving_average_filter src/moving_average_filter.cpp)
-target_link_libraries(moving_average_filter ${catkin_LIBRARIES})
+target_link_libraries(butterworth_filter ${catkin_LIBRARIES})

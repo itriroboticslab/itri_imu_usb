@@ -1,0 +1,10 @@
+filter:
+  enable_linear_acceleration: true
+  enable_angular_velocity: true
+
+  use_moving_average: true
+  use_weighted: false
+  use_outlier: true
+
+  window_size: 10
+  outlier_threshold_percent: 0.2  # 20% deviation allowed
