@@ -38,3 +38,6 @@ target_link_libraries(low_pass_filter ${catkin_LIBRARIES})
 
 add_executable(butterworth_filter src/butterworth_filter.cpp)
 target_link_libraries(butterworth_filter ${catkin_LIBRARIES})
+
+add_executable(weighted_moving_average_filter src/weighted_moving_average_filter.cpp)
+target_link_libraries(weighted_moving_average_filter ${catkin_LIBRARIES})
