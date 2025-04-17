@@ -9,6 +9,7 @@ find_package(catkin REQUIRED COMPONENTS
   sensor_msgs
   serial
   tf2
+  tf2_ros
   Boost
 )
 
@@ -41,3 +42,6 @@ target_link_libraries(butterworth_filter ${catkin_LIBRARIES})
 
 add_executable(weighted_moving_average_filter src/weighted_moving_average_filter.cpp)
 target_link_libraries(weighted_moving_average_filter ${catkin_LIBRARIES})
+
+add_executable(simulate_imu_from_tf src/simulate_imu_from_tf.cpp)
+target_link_libraries(simulate_imu_from_tf ${catkin_LIBRARIES})
