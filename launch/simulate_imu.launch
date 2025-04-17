@@ -1,0 +1,8 @@
+<launch>
+  <node name="simulate_imu_from_tf" pkg="legged_control" type="simulate_imu_from_tf" output="screen">
+    <param name="frame_id" value="base_link"/>
+    <param name="ref_frame" value="odom"/>
+    <param name="noise_std_acc" value="1.0"/>
+    <param name="noise_std_gyro" value="0.1"/>
+  </node>
+</launch>
